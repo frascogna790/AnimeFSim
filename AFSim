@@ -5,19 +5,18 @@ local plr = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
 
 
 spawn(function()
-while AutoPress == true do
-    wait(0.5)
-    keypress(0x45)
-    wait()
-    keyrelease(0x45) 
-keypress(0x45)
-wait(2)
+    while AutoPress == true do
+        wait(1)
+for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
+    if v.Name == "ProximityPrompt" then
+        fireproximityprompt(v)
+        print("FruitPickup")
 end
-end)
+end
 
 spawn(function()
     while AutoFruit == true do
-    wait(6)
+    wait(2)
 local plr = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
 
 for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
@@ -48,6 +47,9 @@ for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
     else
     if v:IsA("MeshPart") and v.Name == "Ito" and v.DataCost == 36 then
         plr.CFrame = v.CFrame
+    else
+    if v:IsA("MeshPart") and v.Name == "Gomu" and v.DataCost == 36 then
+        plr.CFrame = v.CFrame
     end
 end
 end
@@ -57,7 +59,10 @@ end
 end
 end
 end
-end)
 end
 end
+)end
+end
+end
+)end
 end)
