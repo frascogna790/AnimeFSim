@@ -1,0 +1,63 @@
+getgenv().AutoPress = true;                --Made by Nicola#5015
+getgenv().AutoFruit = true;
+
+local plr = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
+
+
+spawn(function()
+while AutoPress == true do
+    wait(0.5)
+    keypress(0x45)
+    wait()
+    keyrelease(0x45) 
+keypress(0x45)
+wait(2)
+end
+end)
+
+spawn(function()
+    while AutoFruit == true do
+    wait(6)
+local plr = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
+
+for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
+    pcall(function()
+    if v:IsA("MeshPart") and v.Name == "Moku" and v.DataCost == 36 then
+        plr.CFrame = v.CFrame
+    else
+    if v:IsA("MeshPart") and v.Name == "Yami" and v.DataCost == 36 then
+        plr.CFrame = v.CFrame                 
+    else
+    if v:IsA("MeshPart") and v.Name == "Hie" and v.DataCost == 36 then
+        plr.CFrame = v.CFrame
+    else
+    if v:IsA("MeshPart") and v.Name == "Base" and v.DataCost == 36 and v.Transparency == 0.5 then
+        plr.CFrame = v.CFrame
+    else
+    if v:IsA("MeshPart") and v.Name == "Base" and v.DataCost == 52 and v.Transparency == 0.5 then
+        plr.CFrame = v.CFrame
+    else
+    if v:IsA("MeshPart") and v.Name == "Base" and v.DataCost == 36 and v.Transparency == 0 then
+        plr.CFrame = v.CFrame
+    else
+    if v:IsA("MeshPart") and v.Name == "Base" and v.DataCost == 52 and v.Transparency == 0 then
+        plr.CFrame = v.CFrame
+    else
+    if v:IsA("MeshPart") and v.Name == "Gasu" and v.DataCost == 36 then
+        plr.CFrame = v.CFrame
+    else
+    if v:IsA("MeshPart") and v.Name == "Ito" and v.DataCost == 36 then
+        plr.CFrame = v.CFrame
+    end
+end
+end
+end
+end
+end
+end
+end
+end
+end)
+end
+end
+end)
