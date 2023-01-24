@@ -10,7 +10,6 @@ spawn(function()
 for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
     if v.Name == "ProximityPrompt" then
         fireproximityprompt(v)
-        print("FruitPickup")
 end
 end
 
